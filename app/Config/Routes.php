@@ -38,6 +38,7 @@ $routes->set404Override();
 $routes->group("api", function ($routes) {
     $routes->post("register", "Register::index");
     $routes->post("login", "Login::index");
+    //$routes->get("users", "User::index");
     $routes->get("users", "User::index", ['filter' => 'authFilter']);
 });
 
